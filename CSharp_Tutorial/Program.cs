@@ -1,4 +1,6 @@
-﻿namespace CSharp_Tutorial
+﻿
+
+namespace CSharp_Tutorial
 {
     internal class Program
     {
