@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="CSharp_Tutorial/CSharp_Tutorial.csproj" />
+  <Project Path="CSMethods/CSMethods.csproj" Id="fd256d5a-9bc1-466a-b068-be00cb406324" />
 </Solution>

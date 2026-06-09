@@ -15,7 +15,7 @@ namespace CSharp_Tutorial
             y += x;
             z -= x;
             Console.WriteLine("x ++ is " + x + ", y += x is " + y + ", z -= x is " + z);
-            
+
             x *= 3;
             y /= 3;
             z %= 3;
@@ -42,6 +42,10 @@ namespace CSharp_Tutorial
             Console.WriteLine("Returns " + (x >= 12) + " for x >= 12 ");
             Console.WriteLine("Returns " + (x <= y) + " for x <= 13 ");
 
+            //Logical Operators
+            Console.WriteLine("Returns " + (x < 20 && x < 13) + " if both statements are true");
+            Console.WriteLine("Returns " + (x < 5 || x < 13) + " if one of the statements is true");
+            Console.WriteLine("Reverse the result, returns " + !(x < 15 && x < 17) + " if the result is true");
         }
     }
 }

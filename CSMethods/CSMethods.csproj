@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CSharp_Tutorial.CSArrays</StartupObject>
+    <StartupObject>CSMethods.MethodParameters</StartupObject>
   </PropertyGroup>
 
 </Project>
