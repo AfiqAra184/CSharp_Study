@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace CSClasses
 {
@@ -27,6 +28,7 @@ namespace CSClasses
     class Vehicle //Base Class (Parent)
     {
         public string brand = "Ford"; //Vehicle Field
+        protected string owner = "Colonel"; //Protected Vehicle Field
         public void honk() //Vehicle Method
         {
             Console.WriteLine("Tuut, tuut!");
@@ -35,6 +37,11 @@ namespace CSClasses
     class Cars : Vehicle //Derived Class (Child)
     {
         public string modelName = "Mustang"; //Car Field
+
+        public void CarDetails()
+        {
+            Console.WriteLine(owner + " " + modelName);
+        }
     }
     internal class Inheritance
     {
@@ -48,7 +55,7 @@ namespace CSClasses
             on the myCar Object
             */
             myCar.honk();
-
+            myCar.CarDetails();
             /*
             Disply the Value of the brand Field (From the 
             Vehicle Class) and the Value of the modelName 
@@ -57,4 +64,23 @@ namespace CSClasses
             Console.WriteLine(myCar.brand + " " + myCar.modelName);
         }
     }
+
+    /*
+    --------------------------------------------------------
+    The sealed Keyword
+    --------------------------------------------------------
+    If you don't want other classes to inherit from a class, 
+    use the sealed keyword:
+    
+    If you try to access a sealed class, C# will generate an 
+    error:
+    sealed class Vehicle 
+    {
+        ...
+    }
+    class Car : Vehicle 
+    {
+        ...
+    }
+    */
 }
