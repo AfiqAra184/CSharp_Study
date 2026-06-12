@@ -26,6 +26,13 @@ namespace CSClasses
             Console.WriteLine("The dog says: bow bow");
         }
     }
+    class Dragon : Animal //Derived Class(Child)
+    {
+        public void animalSound()
+        {
+            Console.WriteLine("The dragon says: rawr rawr");
+        }
+    }
     class Polymorphism
     {
         static void Main(string[] args)
@@ -33,10 +40,13 @@ namespace CSClasses
             Animal myAnimal = new Animal();
             Animal myPig = new Pig();
             Animal myDog = new Dog();
+            Animal myDragon = new Dragon();
 
             myAnimal.animalSound();
             myPig.animalSound();
             myDog.animalSound();
+            myPig.animalSound();
+            myDragon.animalSound(); //Is not override
         }
     }
 }
