@@ -2,4 +2,5 @@
   <Project Path="CSClasses/CSClasses.csproj" Id="edfd6201-3d11-416c-b0f0-f9518d273ff3" />
   <Project Path="CSharp_Tutorial/CSharp_Tutorial.csproj" />
   <Project Path="CSMethods/CSMethods.csproj" Id="fd256d5a-9bc1-466a-b068-be00cb406324" />
+  <Project Path="Exercise/Exercise.csproj" Id="672489ab-c52a-469f-9dbe-6f5440ce8c66" />
 </Solution>

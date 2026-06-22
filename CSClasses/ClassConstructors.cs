@@ -7,7 +7,7 @@ namespace CSClasses
     //Create Class
     class ClassConstructors
     {
-        public string model, color; //Create Field
+        public string model, color = "yellow"; //Create Field
         public int year; //Create Field
 
         //Create Class Constructor Without Parameter
