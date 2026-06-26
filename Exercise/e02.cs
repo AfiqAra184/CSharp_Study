@@ -24,5 +24,20 @@ namespace Exercise
                 Console.WriteLine(cki.Key.ToString());
             } while (cki.Key != ConsoleKey.Escape);
         }
+
+        /*
+        ---------------------------------------------------------------------------
+        Remarks
+        ---------------------------------------------------------------------------
+        The ConsoleKeyInfo type is not intended to be created by users. Instead, it
+        is returned to the user in response to calling the Console.ReadKey method.
+        
+        The ConsoleKeyInfo object describes the ConsoleKey constant and Unicode 
+        character, if any, that correspond to the pressed console key. The 
+        ConsoleKeyInfo object also describes, in a bitwise combination of 
+        ConsoleModifiers values, whether one or more SHIFT, ALT, or CTRL modifier 
+        keys was pressed simultaneously with the console key.
+
+        */
     }
 }
