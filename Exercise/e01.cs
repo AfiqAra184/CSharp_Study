@@ -10,17 +10,48 @@
 
     class CatalogAction : IMenuAction
     {
+        private readonly string[] _names;
+        private readonly double[] _prices;
+        private readonly int[] _stock;
+        public CatalogAction(string[] names, double[] prices, int[] stock)
+        {
+            _names = names;
+            _prices = prices;
+            _stock = stock;
+        }
         public async Task Execute()
         {
             Console.Clear();
+            Console.WriteLine("Store Catalog");
+
+            for (int i = 0; i < _names.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {_names[i]} - RM{_prices[i]:F2} (Stock: {_stock[i]})");
+            }
+
+            Console.WriteLine("\nPress any key to return to the menu");
+            Console.ReadKey(true);
         }
     }
 
-    class OrderAction : IMenuAction
+    class OrderAction(string[] names, double[] prices, int[] stock) : IMenuAction
     {
+        /*private readonly string[] _names;
+        private readonly double[] _prices;
+        private readonly int[] _stock;
+        public OrderAction(string[] names, double[] prices, int[] stock)
+        {
+            _names = names;
+            _prices = prices;
+            _stock = stock;
+        }*/
         public async Task Execute()
         {
             Console.Clear();
+
+            Console.WriteLine("Enter the item name you want to buy: ");
+            string? userInput = Console.ReadLine();
+            //use string? if  have Nullable Reference Types enabled
         }
     }
     class ExitAction : IMenuAction
@@ -174,12 +205,14 @@
                 {
                     case ConsoleKey.D1:
                     case ConsoleKey.NumPad1:
-                        CatalogAction Catalog = new CatalogAction();
+                        CatalogAction Catalog = new CatalogAction(itemNames, itemPrices, itemStock);
+                        await Catalog.Execute();
                         break;
 
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
-                        OrderAction Order = new OrderAction();
+                        OrderAction Order = new OrderAction(itemNames, itemPrices, itemStock);
+                        await Order.Execute();
                         break;
 
                     case ConsoleKey.D3:
